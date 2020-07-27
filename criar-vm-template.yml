@@ -13,7 +13,7 @@
       username: "{{ vcenter_user }}"
       password: "{{ vcenter_pass }}"
       validate_certs: False
-      name: Ubuntu-VM2
+      name: Ubuntu-VM01
       template: Ubuntu 18
       datacenter: "{{ datacenter_name }}"
       folder: /{{ datacenter_name }}/vm
@@ -22,7 +22,7 @@
       - name: VM Network
         type: dhcp
       customization:
-        hostname: "Ubuntu02"
+        hostname: "Ubuntu01"
       state: poweredon
       wait_for_ip_address: yes
     delegate_to: localhost
